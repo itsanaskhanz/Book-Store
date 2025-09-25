@@ -18,9 +18,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(book.router, prefix="/api/books", tags=["Books"])
-app.include_router(user.router, prefix="/api/auth",
-                   tags=["Users"])
+app.include_router(book.router, prefix="/api/book", tags=["Books"])
+app.include_router(user.router, prefix="/api/auth", tags=["Users"])
 
 
 @app.get("/")
