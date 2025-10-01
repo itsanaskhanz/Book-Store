@@ -12,6 +12,11 @@ class UserCreate(UserBase):
     password: str
 
 
+class LoginRequest(BaseModel):
+    email: str
+    password: str
+
+
 class UserRead(UserBase):
     id: int
     books: List[BookRead] = []
